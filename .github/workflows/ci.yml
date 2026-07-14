@@ -1,0 +1,35 @@
+# CI del repo de ejemplos: los 14 casos deben sembrar y detectar su patrón
+# contra el wheel publicado de namidb, y el sitio debe compilar.
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  casos:
+    name: 14 casos · motor real
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar namidb + pytest
+        run: pip install -r requirements.txt pytest
+      - name: Sembrar y consultar los 14 casos
+        run: pytest tests/ -q
+
+  sitio:
+    name: build del sitio
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
