@@ -438,3 +438,25 @@ table.dt { border-collapse: collapse; width: 100%; font-family: var(--mono); fon
 }
 .dash-tab:hover { color: var(--hueso); }
 .dash-tab.activo { color: var(--tinta); background: var(--rosa); border-color: var(--rosa); }
+
+/* ── Responsive del dashboard ── */
+@media (max-width: 620px) {
+  .dash-head { padding: 1.6rem 0 1.2rem; gap: 0.8rem; }
+  .dash-head__top { gap: 0.7rem; }
+  .dash-head__num { font-size: clamp(2rem, 10vw, 3rem); }
+  .dash-head h1 { font-size: clamp(1.7rem, 8vw, 2.6rem); max-width: 100%; }
+  .dash-head__problema { font-size: 0.94rem; max-width: 100%; }
+  .dash-head__ref { max-width: 100%; overflow-wrap: anywhere; }
+
+  /* KPIs: dos por fila en móvil, apilan si no caben */
+  .dash-kpirow { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.7rem; }
+  .dash-kpi { min-height: 104px; padding: 0.9rem 1rem 0.85rem; }
+  .dash-kpi__value { font-size: clamp(1.6rem, 8vw, 2.3rem); }
+
+  .dash-grid { gap: 0.8rem; }
+  .dash-panel__head { flex-wrap: wrap; }
+  .dash-section { margin-bottom: 1.8rem; }
+
+  /* La consola de exploración: editor y grafo a ancho completo */
+  .grafo-caja { height: 340px; }
+}
