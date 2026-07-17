@@ -9,7 +9,7 @@ export default function Landing({ casos, error }: { casos: CasoMeta[] | null; er
       <section className="hero">
         <span className="eyebrow">NamiDB presenta · ejemplos ejecutables</span>
         <h1 className="display">
-          Catorce casos <span className="rosa">de uso.</span>
+          Diecisiete casos <span className="rosa">de uso.</span>
         </h1>
         <p className="hero__baja">
           Un problema de gerencia por industria — y su solución como{" "}
@@ -30,7 +30,7 @@ export default function Landing({ casos, error }: { casos: CasoMeta[] | null; er
         </div>
 
         {error && <div className="error-caja">No pude cargar los casos: {error}</div>}
-        {!casos && !error && <div className="skeleton">cargando los catorce casos…</div>}
+        {!casos && !error && <div className="skeleton">cargando los diecisiete casos…</div>}
 
         {casos?.map((caso) => (
           <Link

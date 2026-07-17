@@ -1,4 +1,4 @@
-"""Registry de los 14 casos de uso.
+"""Registry de los 17 casos de uso.
 
 Cada caso es un paquete `cases/cNN_slug/` que expone:
   META    — dict con la historia del deck (numero, slug, industria, titulo,
@@ -28,6 +28,9 @@ _MODULES = {
     "telecom-causa-raiz": "c12_telecom_causa_raiz",
     "ciberseguridad": "c13_ciberseguridad",
     "agentes-conocimiento": "c14_agentes_conocimiento",
+    "agro-sanidad": "c15_agro_sanidad",
+    "agro-riego": "c16_agro_riego",
+    "agro-rendimiento": "c17_agro_rendimiento",
 }
 
 ORDEN = list(_MODULES.keys())

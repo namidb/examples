@@ -2,7 +2,7 @@
 
 # NamiDB · Ejemplos
 
-### Catorce casos de uso, ejecutándose contra el motor real.
+### Diecisiete casos de uso, ejecutándose contra el motor real.
 
 Un problema de gerencia por industria — con datos sintéticos, el modelo de grafo,
 y las consultas Cypher que revelan la red. Cada carpeta de `cases/` es una base
@@ -37,7 +37,7 @@ python cases/run.py banca-aml --store "s3://mi-bucket?ns=demo&region=us-east-1"
 # o file:///… , gs://… , az://…  — el bucket es la base de datos.
 ```
 
-## Los catorce casos
+## Los diecisiete casos
 
 | # | Caso | Industria | Qué revela |
 |---|------|-----------|------------|
@@ -55,6 +55,9 @@ python cases/run.py banca-aml --store "s3://mi-bucket?ns=demo&region=us-east-1"
 | 12 | [`telecom-causa-raiz`](cases/c12_telecom_causa_raiz) | Telecom — Causa raíz | De cien alarmas a una causa, impacto por SLA |
 | 13 | [`ciberseguridad`](cases/c13_ciberseguridad) | Ciberseguridad — Rutas de ataque | Priorización por exposición real, no por CVSS |
 | 14 | [`agentes-conocimiento`](cases/c14_agentes_conocimiento) | Agentes IA — Conocimiento | Búsqueda híbrida, versión vigente, expertos |
+| 15 | [`agro-sanidad`](cases/c15_agro_sanidad) | Agro — Biovigilancia fitosanitaria | Súper-propagador a poner en cuarentena, focos y zonas de contención |
+| 16 | [`agro-riego`](cases/c16_agro_riego) | Agro — Riego y derechos de agua | Impacto de una falla aguas abajo, sobre-extracción, infraestructura crítica |
+| 17 | [`agro-rendimiento`](cases/c17_agro_rendimiento) | Agro — Brecha de rendimiento | Parcela gemela por búsqueda vectorial, práctica que mueve la aguja |
 
 Cada carpeta tiene un `README.md` con la historia, el modelo de grafo y qué
 demuestra cada consulta.
@@ -76,7 +79,7 @@ cases/c01_banca_aml/
 
 ## El sitio web
 
-Una SPA (Vite + React) con una landing de los 14 casos y, por caso, el grafo
+Una SPA (Vite + React) con una landing de los 17 casos y, por caso, el grafo
 interactivo en vivo y un editor de Cypher que ejecuta contra el motor real.
 
 ```bash

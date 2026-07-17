@@ -55,6 +55,9 @@ export const CASE_ACCENT: Record<string, string> = {
   "telecom-causa-raiz": "#38e8ff",
   "ciberseguridad": "#ff5a5f",
   "agentes-conocimiento": "#a56bff",
+  "agro-sanidad": "#ff6b3d",
+  "agro-riego": "#2dd4bf",
+  "agro-rendimiento": "#9be15d",
 };
 
 export function accent(slug: string): string {
