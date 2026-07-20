@@ -2,7 +2,7 @@
 
 # NamiDB · Ejemplos
 
-### Diecisiete casos de uso, ejecutándose contra el motor real.
+### Dieciocho casos de uso, ejecutándose contra el motor real.
 
 Un problema de gerencia por industria — con datos sintéticos, el modelo de grafo,
 y las consultas Cypher que revelan la red. Cada carpeta de `cases/` es una base
@@ -37,7 +37,7 @@ python cases/run.py banca-aml --store "s3://mi-bucket?ns=demo&region=us-east-1"
 # o file:///… , gs://… , az://…  — el bucket es la base de datos.
 ```
 
-## Los diecisiete casos
+## Los dieciocho casos
 
 | # | Caso | Industria | Qué revela |
 |---|------|-----------|------------|
@@ -58,6 +58,7 @@ python cases/run.py banca-aml --store "s3://mi-bucket?ns=demo&region=us-east-1"
 | 15 | [`agro-sanidad`](cases/c15_agro_sanidad) | Agro — Biovigilancia fitosanitaria | Súper-propagador a poner en cuarentena, focos y zonas de contención |
 | 16 | [`agro-riego`](cases/c16_agro_riego) | Agro — Riego y derechos de agua | Impacto de una falla aguas abajo, sobre-extracción, infraestructura crítica |
 | 17 | [`agro-rendimiento`](cases/c17_agro_rendimiento) | Agro — Brecha de rendimiento | Parcela gemela por búsqueda vectorial, práctica que mueve la aguja |
+| 18 | [`retail-abastecimiento`](cases/c18_retail_abastecimiento) | Comercio y agroindustria — Abastecimiento | Ingreso en riesgo por proveedor único, causa raíz de quiebres, merma y sustitución |
 
 Cada carpeta tiene un `README.md` con la historia, el modelo de grafo y qué
 demuestra cada consulta.
@@ -79,7 +80,7 @@ cases/c01_banca_aml/
 
 ## El sitio web
 
-Una SPA (Vite + React) con una landing de los 17 casos y, por caso, el grafo
+Una SPA (Vite + React) con una landing de los 18 casos y, por caso, el grafo
 interactivo en vivo y un editor de Cypher que ejecuta contra el motor real.
 
 ```bash

@@ -1,4 +1,4 @@
-"""Registry de los 17 casos de uso.
+"""Registry de los 18 casos de uso.
 
 Cada caso es un paquete `cases/cNN_slug/` que expone:
   META    — dict con la historia del deck (numero, slug, industria, titulo,
@@ -31,6 +31,7 @@ _MODULES = {
     "agro-sanidad": "c15_agro_sanidad",
     "agro-riego": "c16_agro_riego",
     "agro-rendimiento": "c17_agro_rendimiento",
+    "retail-abastecimiento": "c18_retail_abastecimiento",
 }
 
 ORDEN = list(_MODULES.keys())

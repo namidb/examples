@@ -23,6 +23,7 @@ const DASHBOARDS: Record<string, LazyExoticComponent<ComponentType<DashProps>>> 
   "agro-sanidad": lazy(() => import("./cases/agroSanidad")),
   "agro-riego": lazy(() => import("./cases/agroRiego")),
   "agro-rendimiento": lazy(() => import("./cases/agroRendimiento")),
+  "retail-abastecimiento": lazy(() => import("./cases/retailAbastecimiento")),
 };
 
 export function getDashboard(slug: string): LazyExoticComponent<ComponentType<DashProps>> | null {

@@ -58,6 +58,7 @@ export const CASE_ACCENT: Record<string, string> = {
   "agro-sanidad": "#ff6b3d",
   "agro-riego": "#2dd4bf",
   "agro-rendimiento": "#9be15d",
+  "retail-abastecimiento": "#ffb703",
 };
 
 export function accent(slug: string): string {
