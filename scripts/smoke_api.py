@@ -1,7 +1,7 @@
 """Smoke test de las 3 funciones tal como las verá Vercel.
 
 Levanta dev_server, golpea /api/meta, /api/graph y /api/cypher (query
-nombrada + una libre) para los 18 casos, y falla si algo no responde 200
+nombrada + una libre) para los 19 casos, y falla si algo no responde 200
 o si un grafo llega vacío. Doble uso: verificación local y paso de CI.
 
     .venv/bin/python scripts/smoke_api.py
@@ -53,7 +53,7 @@ def main() -> int:
 
         meta = get("/api/meta")
         casos = meta["casos"]
-        assert len(casos) == 18, f"esperaba 18 casos, hay {len(casos)}"
+        assert len(casos) == 19, f"esperaba 19 casos, hay {len(casos)}"
         fallos = []
 
         for caso in casos:
@@ -79,7 +79,7 @@ def main() -> int:
             for f in fallos:
                 print("  ✗", f)
             return 1
-        print(f"\nOK — 18 casos, {sum(len(c['queries']) for c in casos)} queries, todos con datos.")
+        print(f"\nOK — 19 casos, {sum(len(c['queries']) for c in casos)} queries, todos con datos.")
         return 0
     finally:
         proc.terminate()
